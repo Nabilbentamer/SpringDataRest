@@ -2,9 +2,10 @@ package com.example.springdatarest.Model;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
-
+@RepositoryRestResource
 public interface VoitureRepo extends CrudRepository<Voiture,Long> {
 
     List<Voiture> findByMarque(String marque);

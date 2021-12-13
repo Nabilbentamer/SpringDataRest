@@ -1,5 +1,7 @@
 package com.example.springdatarest.Model;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 @Entity
 @Data
@@ -9,6 +11,7 @@ import lombok.*;
 
 
 public class Voiture {
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "proprietaire")
     @NonNull
